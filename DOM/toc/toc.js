@@ -1,6 +1,6 @@
 
-  var toc = "";
-  var level = 0;
+  let toc = "";
+  let level = 0;
 
   document.querySelector("body").innerHTML = document.querySelector("body")
     .innerHTML.replace(
@@ -18,19 +18,11 @@
 
         level = parseInt(openLevel);
 
-        var anchor = titleText.replace(/ /g, "_");
+        let anchor = titleText.replace(/ /g, "_");
         toc += '<li><a href="#' + anchor + '">' + titleText + "</a></li>";
-
+   
         return (
-          "<h" +
-          openLevel +
-          '><a name="' +
-          anchor +
-          '">' +
-          titleText +
-          "</a></h" +
-          closeLevel +
-          ">"
+         "<h" + openLevel + '><a name="' +anchor +    '">' + titleText + "</a></h" +  closeLevel +    ">"
         );
       }
     );

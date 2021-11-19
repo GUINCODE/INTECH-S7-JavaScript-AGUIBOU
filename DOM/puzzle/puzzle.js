@@ -1,0 +1,1 @@
+document.querySelector("img").style.clip = rect("0px","65px","35px","40px");
